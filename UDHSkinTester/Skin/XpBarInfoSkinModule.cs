@@ -18,6 +18,7 @@ namespace UDHSkinTester.Skin
         public Drawables GetDrawables(ProfileData data)
         {
             PointD xpBarPosition = new PointD(StartX, StartY);
+            
 
             return new Drawables()
                 //XP Bar Info
