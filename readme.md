@@ -155,10 +155,14 @@ Here's a quick rundown of each attributes you will be able to find :
     * Font name
 * StrokeWidth
     * double, width of the stroke
+* TextAlignment
+    * string, Left, Right or Center
+* TextKerning
+    * Double, default 0
 
 Here's the available modules :
 * AvatarBorder : Draw a square shape around the avatar
-    * Available attributes 
+    * Available attributes
         * Size
 * XpBar
     * Width
@@ -168,57 +172,24 @@ Here's the available modules :
     * OutsideFillColor
     * InsideStrokeColor
     * InsideFillCoor
+
+### The following text modules all have the same attributes
+* StrokeAntiAlias
+* TextAntiAlias
+* TextAlignment
+* TextKerning
+* StrokeColor
+* StrokeWidth
+* FillColor
+* Font
+* FontPointSize
+
+### The modules are as follow :
+
 * XpBarInfo
-    * StrokeWidth
-    * FillColor
-    * StrokeColor
-    * Font
-    * FontPointSize
 * Level
-    * StrokeAntiAlias
-    * TextAntiAlias
-    * StrokeColor
-    * StrokeWidth
-    * FillColor
-    * Font
-    * FontPointSize
 * Username
-    * StrokeAntiAlias
-    * TextAntiAlias
-    * StrokeColor
-    * StrokeWidth
-    * FillColor
-    * Font
-    * FontPointSize
 * TotalXp
-    * StrokeAntiAlias
-    * TextAntiAlias
-    * StrokeColor
-    * StrokeWidth
-    * FillColor
-    * Font
-    * FontPointSize
 * XpRank
-    * StrokeAntiAlias
-    * TextAntiAlias
-    * StrokeColor
-    * StrokeWidth
-    * FillColor
-    * Font
-    * FontPointSize
 * KarmaPoints
-    * StrokeAntiAlias
-    * TextAntiAlias
-    * StrokeColor
-    * StrokeWidth
-    * FillColor
-    * Font
-    * FontPointSize
 * KarmaRank
-     * StrokeAntiAlias
-    * TextAntiAlias
-    * StrokeColor
-    * StrokeWidth
-    * FillColor
-    * Font
-    * FontPointSize
