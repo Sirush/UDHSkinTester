@@ -1,15 +1,15 @@
 {
-  "userId": 84252127995658240,
-  "nickname": null,
-  "username": "zaaKun",
-  "xpTotal": 12345,
-  "xpRank": 45,
-  "karmaRank": 22,
-  "karma": 233,
-  "level": 32,
-  "xpLow": 10000,
-  "xpHigh": 20000,
-  "xpShown": 5000,
-  "maxXpShown": 10000,
-  "xpPercentage": 0.7
+    "userId": 84252127995658240,
+    "nickname": null,
+    "username": "Sirus",
+    "xpTotal": 1234512,
+    "xpRank": 45,
+    "karmaRank": 22,
+    "karma": 233,
+    "level": 32,
+    "xpLow": 10000,
+    "xpHigh": 20000,
+    "xpShown": 5000,
+    "maxXpShown": 10000,
+    "xpPercentage": 0.7
 }

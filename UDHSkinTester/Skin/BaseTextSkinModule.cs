@@ -1,4 +1,6 @@
 using ImageMagick;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace UDHSkinTester.Skin
 {
@@ -15,12 +17,36 @@ namespace UDHSkinTester.Skin
         public string Font { get; set; }
         public double FontPointSize { get; set; }
         public string Text { get; set; }
+        public double TextKerning { get; set; }
+        [JsonConverter(typeof(StringEnumConverter))]
+        public TextAlignment TextAlignment { get; set; }
 
         public virtual string Type { get; set; }
 
         public virtual Drawables GetDrawables(ProfileData data)
         {
-            throw new System.NotImplementedException();
+            PointD position = new PointD(StartX, StartY);
+
+            return new Drawables()
+                .FontPointSize(FontPointSize)
+                .Font(Font)
+                .StrokeColor(new MagickColor(StrokeColor))
+                .StrokeWidth(StrokeWidth)
+                .StrokeAntialias(StrokeAntiAlias)
+                .FillColor(new MagickColor(FillColor))
+                .TextAntialias(TextAntiAlias)
+                .TextAlignment(TextAlignment)
+                .TextKerning(TextKerning)
+                .Text(position.X, position.Y, Text);
+        }
+
+        public BaseTextSkinModule()
+        {
+            StrokeWidth = 1;
+            Font = "Consolas";
+            TextAntiAlias = true;
+            StrokeAntiAlias = true;
+            TextKerning = 0;
         }
     }
 }
