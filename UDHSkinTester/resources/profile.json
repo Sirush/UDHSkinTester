@@ -1,15 +1,15 @@
 {
   "userId": 84252127995658240,
   "nickname": null,
-  "username": "Sirus",
-  "xpTotal": 123123123,
-  "xpRank": 1,
-  "karmaRank": 4,
-  "karma": 500,
-  "level": 183,
+  "username": "zaaKun",
+  "xpTotal": 12345,
+  "xpRank": 45,
+  "karmaRank": 22,
+  "karma": 233,
+  "level": 32,
   "xpLow": 10000,
   "xpHigh": 20000,
   "xpShown": 5000,
   "maxXpShown": 10000,
-  "xpPercentage": 0.5
+  "xpPercentage": 0.7
 }
