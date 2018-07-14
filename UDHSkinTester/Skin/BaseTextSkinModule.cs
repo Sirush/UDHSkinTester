@@ -14,6 +14,7 @@ namespace UDHSkinTester.Skin
         public string FillColor { get; set; }
         public string Font { get; set; }
         public double FontPointSize { get; set; }
+        public string Text { get; set; }
 
         public virtual string Type { get; set; }
 
