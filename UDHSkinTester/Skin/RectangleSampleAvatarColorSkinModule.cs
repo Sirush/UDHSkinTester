@@ -11,6 +11,8 @@ namespace UDHSkinTester.Skin
         public int StartY { get; set; }
         public int Width { get; set; }
         public int Height { get; set; }
+        public bool WhiteFix { get; set; }
+        public string DefaultColor { get; set; }
 
         public string Type { get; set; }
 
@@ -28,7 +30,12 @@ namespace UDHSkinTester.Skin
             //basically we let magick to choose what the main color by resizing to 1x1
             MagickImage copy = new MagickImage(dataPicture);
             copy.Resize(1, 1);
-            return copy.GetPixels()[0, 0].ToColor();
+            MagickColor color = copy.GetPixels()[0, 0].ToColor();            
+            
+            if (WhiteFix && color.R + color.G + color.B > 650)
+                color = new MagickColor(DefaultColor);
+            
+            return color;
         }
     }
 }
