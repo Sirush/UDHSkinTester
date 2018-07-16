@@ -1,4 +1,4 @@
-﻿using System.Drawing;
+﻿﻿﻿using System.Drawing;
 using System.IO;
 using ImageMagick;
 using Newtonsoft.Json;
@@ -16,6 +16,7 @@ namespace UDHSkinTester
         {
             ProfileData data = JsonConvert.DeserializeObject<ProfileData>(File.ReadAllText(_profilePath));
             data.MainRoleColor = Color.Red;
+            data.Picture = new MagickImage(_avatarPath);
             return data;
         }
 
@@ -28,21 +29,21 @@ namespace UDHSkinTester
         {
             using (MagickImageCollection profileCard = new MagickImageCollection())
             {
-                MagickImage avatar = new MagickImage(_avatarPath);
-
                 ProfileData profile = GetProfileData();
                 SkinData skin = GetSkinData();
 
                 MagickImage background = new MagickImage(skin.Background);
-                avatar.Resize(skin.AvatarSize, skin.AvatarSize);
+                profile.Picture.Resize(skin.AvatarSize, skin.AvatarSize);
                 profileCard.Add(background);
-
 
                 foreach (var layer in skin.Layers)
                 {
                     if (layer.Image != null)
                     {
-                        MagickImage image = new MagickImage(layer.Image);
+                        MagickImage image = layer.Image.ToLower() == "avatar"
+                            ? profile.Picture
+                            : new MagickImage(layer.Image);
+                        
                         background.Composite(image, (int) layer.StartX, (int) layer.StartY, CompositeOperator.Over);
                     }
 
@@ -54,9 +55,6 @@ namespace UDHSkinTester
 
                     background.Composite(l, (int) layer.StartX, (int) layer.StartY, CompositeOperator.Over);
                 }
-
-                //Composite avatar on top 
-                background.Composite(avatar, skin.AvatarX, skin.AvatarY, CompositeOperator.Over);
 
                 using (IMagickImage result = profileCard.Mosaic())
                 {
