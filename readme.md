@@ -10,8 +10,6 @@ Here's an example of the default skin :
     "Codename": "default",
     "Description": "Default avatar",
     "AvatarSize": 128,
-    "AvatarX": 36,
-    "AvatarY": 40,
     "Background": "resources/background.png",
     "Layers": [
         {
@@ -46,7 +44,8 @@ Here's an example of the default skin :
                     "Font": "Consolas",
                     "FillColor": "#000000FF",
                     "StrokeColor": "#00000000",
-                    "FontPointSize": 17
+                    "FontPointSize": 17,
+                    "TextAlignment": "Center"
                 },
                 {
                     "Type": "Username",
@@ -65,7 +64,8 @@ Here's an example of the default skin :
                     "StartY": 83,
                     "FontPointSize": 17,
                     "Font": "Consolas",
-                    "FillColor": "#000000FF"
+                    "FillColor": "#000000FF",
+                    "TextAlignment": "Right"
                 },
                 {
                     "Type": "XpRank",
@@ -73,7 +73,8 @@ Here's an example of the default skin :
                     "StartY": 108,
                     "FontPointSize": 17,
                     "Font": "Consolas",
-                    "FillColor": "#000000FF"
+                    "FillColor": "#000000FF",
+                    "TextAlignment": "Right"
                 },
                 {
                     "Type": "KarmaRank",
@@ -81,7 +82,8 @@ Here's an example of the default skin :
                     "StartY": 153,
                     "FontPointSize": 17,
                     "Font": "Consolas",
-                    "FillColor": "#000000FF"
+                    "FillColor": "#000000FF",
+                    "TextAlignment": "Right"
                 },
                 {
                     "Type": "KarmaPoints",
@@ -89,16 +91,23 @@ Here's an example of the default skin :
                     "StartY": 130,
                     "FontPointSize": 17,
                     "Font": "Consolas",
-                    "FillColor": "#000000FF"
+                    "FillColor": "#000000FF",
+                    "TextAlignment": "Right"
                 },
                 {
                     "Type": "Level",
                     "StartX": 220,
                     "StartY": 140,
                     "FontPointSize": 50,
-                    "Font": "Consolas"
+                    "Font": "Consolas",
+                    "TextAlignment": "Center"
                 }
             ]
+        },
+        {
+            "Image": "avatar",
+            "StartX": 36,
+            "StartY": 40
         }
     ]
 }

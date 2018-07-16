@@ -3,8 +3,6 @@
     "Codename": "default",
     "Description": "Default avatar",
     "AvatarSize": 128,
-    "AvatarX": 36,
-    "AvatarY": 40,
     "Background": "resources/background.png",
     "Layers": [
         {
@@ -98,6 +96,11 @@
                     "TextAlignment": "Center"
                 }
             ]
+        },
+        {
+            "Image": "avatar",
+            "StartX": 36,
+            "StartY": 40
         }
     ]
 }
