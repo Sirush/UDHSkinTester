@@ -5,11 +5,10 @@ namespace UDHSkinTester.Skin
 {
     public class CustomTextSkinModule : BaseTextSkinModule
     {
-
         public override Drawables GetDrawables(ProfileData data)
         {
             PointD textPosition = new PointD(StartX, StartY);
-            
+
             // Reflection to convert stuff like {Level} to data.Level
             var reg = new Regex(@"(?<=\{)(.*?)(?=\})");
             var mc = reg.Matches(Text);
