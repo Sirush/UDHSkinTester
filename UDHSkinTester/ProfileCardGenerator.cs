@@ -10,7 +10,7 @@ namespace UDHSkinTester
     {
         private string _avatarPath = "resources/avatar.png";
         private string _profilePath = "resources/profile.json";
-        private string _skinPath = "resources/skin.json";
+        private string _skinPath = "resources/skin.alaanor.json";
 
         private ProfileData GetProfileData()
         {
