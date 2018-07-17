@@ -1,7 +1,7 @@
 ### For your skin to be added to UDH, it will have to be manually approved ! You can submit your skin at [URL TO COME, @me for now]
 # Your skin will be automatically rejected if it doesn't fill these two conditions :
 * You must have the rights to modify and use all images without attribution
-* The Width to Height ratio must be a minimum of 3.0 (example : 600/200, 640/128...)
+* The profile card must have a fixed size of 400x200 (width x height)
 
 Here's an example of the default skin :
 ```json
@@ -16,8 +16,6 @@ Here's an example of the default skin :
             "Image": "resources/foreground.png",
             "StartX": 30,
             "StartY": 20,
-            "Width": 640,
-            "Height": 209,
             "Modules": [
                 {
                     "Type": "AvatarBorder",
