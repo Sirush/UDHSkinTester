@@ -16,6 +16,8 @@ Here's an example of the default skin :
             "Image": "resources/foreground.png",
             "StartX": 30,
             "StartY": 20,
+            "Width": 640,
+            "Height": 209,
             "Modules": [
                 {
                     "Type": "AvatarBorder",
