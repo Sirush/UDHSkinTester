@@ -1,4 +1,4 @@
-﻿﻿﻿using System.Drawing;
+﻿using System.Drawing;
 using System.IO;
 using ImageMagick;
 using Newtonsoft.Json;
@@ -41,9 +41,8 @@ namespace UDHSkinTester
                     if (layer.Image != null)
                     {
                         MagickImage image = layer.Image.ToLower() == "avatar"
-                            ? profile.Picture
-                            : new MagickImage(layer.Image);
-                        
+                                                ? profile.Picture
+                                                : new MagickImage(layer.Image);
                         background.Composite(image, (int) layer.StartX, (int) layer.StartY, CompositeOperator.Over);
                     }
 
