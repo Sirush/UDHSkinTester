@@ -1,4 +1,4 @@
-﻿﻿﻿using System.Drawing;
+﻿using System.Drawing;
 using System.IO;
 using ImageMagick;
 using Newtonsoft.Json;
@@ -40,24 +40,10 @@ namespace UDHSkinTester
                 {
                     if (layer.Image != null)
                     {
-                        if (layer.Image.Contains("Mask.png"))
-                        {
-                            MagickImage mask = new MagickImage(layer.Image);
-                            mask.Resize(skin.AvatarSize, skin.AvatarSize);
-                            profile.Picture.Composite(mask, CompositeOperator.CopyAlpha);
-                            mask.Resize(skin.AvatarSize + (int) layer.StrokeWidth * 2, skin.AvatarSize + (int) layer.StrokeWidth * 2);
-                            MagickColor m = MagickColor.FromRgb(profile.MainRoleColor.R, profile.MainRoleColor.G, profile.MainRoleColor.B);
-                            mask.Colorize(m, new Percentage(100));
-                            background.Composite(mask, (int) layer.StartX - (int) layer.StrokeWidth, (int) layer.StartY - (int) layer.StrokeWidth,
-                                                 CompositeOperator.Over);
-                        }
-                        else
-                        {
-                            MagickImage image = layer.Image.ToLower() == "avatar"
-                                                    ? profile.Picture
-                                                    : new MagickImage(layer.Image);
-                            background.Composite(image, (int) layer.StartX, (int) layer.StartY, CompositeOperator.Over);
-                        }
+                        MagickImage image = layer.Image.ToLower() == "avatar"
+                                                ? profile.Picture
+                                                : new MagickImage(layer.Image);
+                        background.Composite(image, (int) layer.StartX, (int) layer.StartY, CompositeOperator.Over);
                     }
 
                     MagickImage l = new MagickImage(MagickColors.Transparent, (int) layer.Width, (int) layer.Height);

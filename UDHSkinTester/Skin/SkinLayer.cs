@@ -9,7 +9,6 @@ namespace UDHSkinTester.Skin
         public double StartY { get; set; }
         public double Width { get; set; }
         public double Height { get; set; }
-        public double StrokeWidth { get; set; }
 
         public List<ISkinModule> Modules { get; set; }
 
